@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PatientManagement.Core.RepositoryContracts;
+using PatientManagement.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,7 @@ public static class DependencyInjection
     public static IServiceCollection
         AddInfrastructure(this IServiceCollection services)
     {
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PatientManagement.Core.ServiceContracts;
+using PatientManagement.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddCore(this IServiceCollection services)
     {
+        services.AddScoped<IUsersService, UsersServices>();
         return services;
     }
 }

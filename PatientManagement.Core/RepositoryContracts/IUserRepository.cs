@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PatientManagement.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace PatientManagement.Core.RepositoryContracts;
 
 public interface IUserRepository
 {
-    
+    Task<ApplicationUser?>AddUser(ApplicationUser user);
+    Task<ApplicationUser?>GetUserByEmailAndPassword(string? email, string? password);
 }
 
