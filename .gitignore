@@ -1,0 +1,20 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userprefs
+
+# Build outputs
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.cache
+*.json
+
+# Project-specific
+DocumentLayout.json
+FileContentIndex/
+config/applicationhost.config
+appsettings.Development.json
