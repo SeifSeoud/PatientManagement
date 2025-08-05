@@ -1,0 +1,183 @@
+<div class="container py-4">
+  <h2 class="text-primary mb-4">Patients</h2>
+
+  <!-- Add Patient Form -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">Add Patient</div>
+    <div class="card-body row g-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newPatient.firstName"
+          placeholder="First Name"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newPatient.lastName"
+          placeholder="Last Name"
+        />
+      </div>
+      <div class="col-md-4">
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="newPatient.dateOfBirth"
+          placeholder="DOB"
+        />
+      </div>
+      <div class="col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newPatient.gender"
+          placeholder="Gender"
+        />
+      </div>
+      <div class="col-md-4">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newPatient.address"
+          placeholder="Address"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="newPatient.phoneNumber"
+          placeholder="Phone"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="newPatient.email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="col-12 text-end">
+        <button class="btn btn-success" (click)="addPatient()">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patient List Table -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle shadow-sm">
+      <thead class="table-dark">
+        <tr>
+          <th>Full Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Contact</th>
+          <th>Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <ng-container
+            *ngIf="editingPatientId !== patient.patientID; else editForm"
+          >
+            <td>{{ patient.fullName }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.gender }}</td>
+            <td>{{ patient.contactInfo }}</td>
+            <td>{{ patient.isActive ? "Yes" : "No" }}</td>
+            <td>
+              <button
+                class="btn btn-sm btn-outline-primary me-1"
+                (click)="startEdit(patient)"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-sm btn-outline-danger"
+                (click)="deletePatient(patient.patientID)"
+              >
+                Delete
+              </button>
+            </td>
+          </ng-container>
+
+          <!-- Edit Mode -->
+          <ng-template #editForm>
+            <td colspan="6">
+              <div class="row g-2">
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.firstName"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.lastName"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.dateOfBirth"
+                    type="date"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.gender"
+                    placeholder="Gender"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.address"
+                    placeholder="Address"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.phoneNumber"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    class="form-control"
+                    [(ngModel)]="updatePatientData.email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-md-6 text-end">
+                  <button
+                    class="btn btn-sm btn-primary me-2"
+                    (click)="saveEdit()"
+                  >
+                    Save
+                  </button>
+                  <button
+                    class="btn btn-sm btn-secondary"
+                    (click)="cancelEdit()"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </td>
+          </ng-template>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

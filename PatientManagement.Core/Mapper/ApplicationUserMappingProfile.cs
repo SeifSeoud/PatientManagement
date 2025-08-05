@@ -55,6 +55,8 @@ public class ApplicationUserMappingProfile:Profile
             .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
             .ForMember(dest => dest.Age, opt => opt.MapFrom(src => CalculateAge(src.DateOfBirth)))
             .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+            .ForMember(dest => dest.DateOfBirth, opt => opt.MapFrom(src => src.DateOfBirth))
+            .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
             .ForMember(dest => dest.ContactInfo, opt => opt.MapFrom(src => $"{src.PhoneNumber} | {src.Email}"))
             .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive));
 
