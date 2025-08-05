@@ -1,0 +1,11 @@
+D:\Work\Projects\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.deps.json
+D:\Work\Projects\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.dll
+D:\Work\Projects\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.pdb
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.AssemblyInfoInputs.cache
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.AssemblyInfo.cs
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.csproj.CoreCompileInputs.cache
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.dll
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\refint\PatientManagement.Core.dll
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.pdb
+D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\ref\PatientManagement.Core.dll

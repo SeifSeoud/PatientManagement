@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SLWgHs/j9bk=",
+  "success": true,
+  "projectFilePath": "D:\\Work\\Projects\\PatientManagement\\PatientManagement.Api\\PatientManagement.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Seif Seoud\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
