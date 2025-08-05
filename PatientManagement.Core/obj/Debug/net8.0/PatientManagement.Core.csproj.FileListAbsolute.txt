@@ -9,3 +9,16 @@ D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\Patie
 D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\refint\PatientManagement.Core.dll
 D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.pdb
 D:\Work\Projects\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\ref\PatientManagement.Core.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.deps.json
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\bin\Debug\net8.0\PatientManagement.Core.pdb
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.csproj.AssemblyReference.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.AssemblyInfoInputs.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.AssemblyInfo.cs
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.sourcelink.json
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\refint\PatientManagement.Core.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\PatientManagement.Core.pdb
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Core\obj\Debug\net8.0\ref\PatientManagement.Core.dll

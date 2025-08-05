@@ -1,0 +1,16 @@
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\bin\Debug\net8.0\PatientManagement.Infrastructure.deps.json
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\bin\Debug\net8.0\PatientManagement.Infrastructure.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\bin\Debug\net8.0\PatientManagement.Infrastructure.pdb
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\bin\Debug\net8.0\PatientManagement.Core.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\bin\Debug\net8.0\PatientManagement.Core.pdb
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.AssemblyInfo.cs
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.sourcelink.json
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientM.F5BBBADA.Up2Date
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\refint\PatientManagement.Infrastructure.dll
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\PatientManagement.Infrastructure.pdb
+C:\Users\SeifSEOUD\Source\Repos\PatientManagement\PatientManagement.Infrastructure\obj\Debug\net8.0\ref\PatientManagement.Infrastructure.dll

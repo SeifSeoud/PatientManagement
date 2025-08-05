@@ -1,8 +1,0 @@
-# Visual Studio specific files
-.vs/
-*.suo
-*.user
-*.userprefs
-*.sln.ide
-bin/
-obj/
