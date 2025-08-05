@@ -12,4 +12,11 @@ public record AuthenticationResponse(
     string?PersonName,
     string?Gender,
     string?Token,
-    bool Success); 
+    bool Success)
+{
+    public AuthenticationResponse():this (default, default, default, default, default, default)
+    {
+        
+    }
+}
+

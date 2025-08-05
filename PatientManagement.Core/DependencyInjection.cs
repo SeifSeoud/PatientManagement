@@ -13,7 +13,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddCore(this IServiceCollection services)
     {
-        services.AddScoped<IUsersService, UsersServices>();
+        services.AddScoped<IUsersService, UsersService>();
+        services.AddScoped<IJwtService, JwtService>();
+        services.AddScoped<IPatientService, PatientService>();
         return services;
     }
 }
