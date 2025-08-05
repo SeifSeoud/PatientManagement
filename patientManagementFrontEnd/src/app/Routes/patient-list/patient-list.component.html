@@ -1,5 +1,10 @@
 <div class="container py-4">
-  <h2 class="text-primary mb-4">Patients</h2>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary m-0">Patients</h2>
+    <button class="btn btn-danger" (click)="logout()">
+      <i class="bi bi-box-arrow-right me-1"></i> Logout
+    </button>
+  </div>
 
   <!-- Add Patient Form -->
   <div class="card mb-4 shadow-sm">

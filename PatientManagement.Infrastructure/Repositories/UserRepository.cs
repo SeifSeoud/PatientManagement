@@ -24,28 +24,37 @@ public class UserRepository : IUserRepository
     {
         try
         {
-            string query = "INSERT INTO public .\"Users\"(\"UserID\",\"Email\",\"PersonName\",\"Gender\",\"Password\") VALUES(@UserID,@Email,@PersonName,@Gender,@Password)";
+            // SQL Server syntax - using square brackets and no 'public' schema
+            string query = @"INSERT INTO [Users] (
+                            [UserID],
+                            [Email],
+                            [PersonName],
+                            [Gender],
+                            [Password]
+                        ) VALUES (
+                            @UserID,
+                            @Email,
+                            @PersonName,
+                            @Gender,
+                            @Password
+                        )";
+
             int rowCountAffected = await _dbContext.DbConnection.ExecuteAsync(query, user);
-            if (rowCountAffected > 0)
-            {
-                return user;
-            }
-            else
-            {
-                return null;
-            }
+            return rowCountAffected > 0 ? user : null;
         }
         catch (Exception ex)
         {
+            // Consider logging the error here
             throw;
         }
     }
-
     public async Task<ApplicationUser?> GetUserByEmailAndPassword(string? email, string? password)
     {
         try
         {
-            string query = "SELECT \"UserID\", \"Email\", \"PersonName\", \"Gender\",\"Password\"FROM public.\"Users\" WHERE \"Email\" = @Email AND \"Password\" = @Password";
+            string query = @"SELECT [UserID], [Email], [PersonName], [Gender], [Password] 
+                FROM [Users] 
+                WHERE [Email] = @Email AND [Password] = @Password";
             ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(
                 query,
                 new

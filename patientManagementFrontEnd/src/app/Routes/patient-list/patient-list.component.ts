@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule, DatePipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -36,7 +36,10 @@ export class PatientListComponent implements OnInit {
   editingPatientId: string | null = null;
   updatePatientData: PatientUpdateRequest = this.getEmptyPatient();
 
-  constructor(private patientService: PatientService) {}
+  constructor(
+    private patientService: PatientService,
+    private router: Router // Add this
+  ) {}
 
   ngOnInit(): void {
     this.loadPatients();
@@ -60,7 +63,14 @@ export class PatientListComponent implements OnInit {
       this.patients = this.patients.filter((p) => p.patientID !== id);
     });
   }
+  logout() {
+    // Clear any authentication tokens/user data
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('currentUser');
 
+    // Navigate to login page
+    this.router.navigate(['/login']);
+  }
   startEdit(patient: PatientResponse) {
     this.editingPatientId = patient.patientID;
     const [firstName, ...rest] = (patient.fullName || '').split(' ');
