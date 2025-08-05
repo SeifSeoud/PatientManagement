@@ -20,7 +20,9 @@ public class PatientRepository:IPatientRepository
 
     public async Task<Patient> AddPatient(Patient patient)
     {
-        string query = @"INSERT INTO Patients 
+        try
+        {
+            string query = @"INSERT INTO Patients 
                             (PatientID, FirstName, LastName, DateOfBirth, Gender, 
                              Address, PhoneNumber, Email, CreatedAt, IsActive)
                             VALUES 
@@ -28,33 +30,61 @@ public class PatientRepository:IPatientRepository
                              @Address, @PhoneNumber, @Email, @CreatedAt, @IsActive);
                             SELECT * FROM Patients WHERE PatientID = @PatientID;";
 
-        // Use _dbContext.DbConnection directly
-        var result = await _dbContext.DbConnection.QuerySingleAsync<Patient>(query, patient);
-        return result;
+            // Use _dbContext.DbConnection directly
+            var result = await _dbContext.DbConnection.QuerySingleAsync<Patient>(query, patient);
+            return result;
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
     }
     public async Task<bool> DeletePatient(Guid patientID)
     {
-        string query = "UPDATE Patients SET IsActive = 0 WHERE PatientID = @PatientID";
-        var affectedRows = await _dbContext.DbConnection.ExecuteAsync(query, new { PatientID = patientID });
-        return affectedRows > 0;
+        try
+        {
+            string query = "UPDATE Patients SET IsActive = 0 WHERE PatientID = @PatientID";
+            var affectedRows = await _dbContext.DbConnection.ExecuteAsync(query, new { PatientID = patientID });
+            return affectedRows > 0;
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
     }
 
     public async Task<List<Patient>> GetAllPatients()
     {
-        string query = "SELECT * FROM Patients WHERE IsActive = 1";
-        var patients = await _dbContext.DbConnection.QueryAsync<Patient>(query);
-        return patients.ToList();
+        try
+        {
+            string query = "SELECT * FROM Patients WHERE IsActive = 1";
+            var patients = await _dbContext.DbConnection.QueryAsync<Patient>(query);
+            return patients.ToList();
+        }
+        catch(Exception ex)
+        {
+            throw;
+        }
     }
 
     public async Task<Patient?> GetPatientById(Guid patientID)
     {
-        string query = "SELECT * FROM Patients WHERE PatientID = @PatientID AND IsActive = 1";
-        var patient = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<Patient>(query, new { PatientID = patientID });
-        return patient;
+        try
+        {
+            string query = "SELECT * FROM Patients WHERE PatientID = @PatientID AND IsActive = 1";
+            var patient = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<Patient>(query, new { PatientID = patientID });
+            return patient;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
     public async Task<Patient?> UpdatePatient(Patient patient)
     {
-        string query = @"UPDATE Patients SET 
+        try
+        {
+            string query = @"UPDATE Patients SET 
                             FirstName = @FirstName,
                             LastName = @LastName,
                             DateOfBirth = @DateOfBirth,
@@ -66,7 +96,12 @@ public class PatientRepository:IPatientRepository
                             WHERE PatientID = @PatientID;
                             SELECT * FROM Patients WHERE PatientID = @PatientID;";
 
-        var result = await _dbContext.DbConnection.QuerySingleOrDefaultAsync<Patient>(query, patient);
-        return result;
+            var result = await _dbContext.DbConnection.QuerySingleOrDefaultAsync<Patient>(query, patient);
+            return result;
+        }
+        catch(Exception ex)
+        {
+            throw;
+        }
     }
 }
